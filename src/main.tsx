@@ -29,3 +29,8 @@ const rootElement = document.getElementById("root");
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(<RouterProvider router={router} />);
 }
+
+const port = process.env.PORT || 3000;
+if (import.meta.env.DEV) {
+  console.log(`Development server running on port ${port}`);
+}
